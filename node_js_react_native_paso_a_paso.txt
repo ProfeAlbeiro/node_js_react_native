@@ -1,14 +1,14 @@
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
-|||------------------------------------------------------------- REACT NATIVE Y NODE.JS ---------------------------------------------------------------|||
+|||------------------------------------------------------------- NODE.JS Y REACT NATIVE Y NODE.JS -----------------------------------------------------|||
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 |||                                                                                                                                                    |||
 ||| -- 01.  PREPARAR EL ENTORNO DE DESARROLLO                                                                                                          |||
-||| -- 02.  ESTRUCTURA DE CARPETAS Y ARCHIVOS                                                                                                          |||
-||| -- 03.  BACKEND. NODE.JS                                                                                                                           |||
-||| -- 04.  FRONTEND. REACT_NATIVE                                                                                                                     |||
-||| -- XX.  DESPLEGAR UN PROYECTO                                                                                                                      |||
+||| -- 02.  ESTRUCTURA DE CARPETAS Y ARCHIVOS DEL PROYECTO                                                                                             |||
+||| -- 03.  BACKEND  - API    :   NODE.JS                                                                                                              |||
+||| -- 04.  FRONTEND - MÓVIL  :   REACT_NATIVE                                                                                                         |||
+||| -- XX.  DESPLEGAR EL PROYECTO                                                                                                                      |||
 |||                                                                                                                                                    |||
 ||| -- AUTOR:           ADAPTACIÓN hecha por el Instructor ALBEIRO RAMOS. SENA, 2025; del Taller CORREGIDO por el Instructor MAURICIO LARA. SENA, 2024;|||
 |||                     del ORIGINAL elaborado por el Instructor MARCO LEÓN MORA. SENA, 2023.                                                          |||
@@ -25,7 +25,7 @@
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|-- 01.02.  Instalar Visual Studio Code: ----------------------------------------------------------------------------------------------------------------|
+|-- 01.01.  Instalar Visual Studio Code: ----------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
             01. Descargar 'Visual Studio Code': https://code.visualstudio.com/download.
@@ -44,8 +44,14 @@
                     ⦿   Paste JSON as Code
                     ⦿   TypeScript importer
 
+            05. Abrir una 'Terminal' en Visual Studio Code:
+
+                    ⦿   'Terminal / New Terminal' ó 'Ctrl + Shift + ñ'
+                    ⦿   Verificar que sea 'pwsh' o sino hay que cambiarla
+
+
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|-- 01.03.  Instalar node.js: ---------------------------------------------------------------------------------------------------------------------------|
+|-- 01.02.  Instalar node.js: ---------------------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
             01. Descargar 'node.js': https://nodejs.org/es/.
@@ -54,31 +60,35 @@
 
             02. Instalar node.js.
 
-            03. En la terminal de 'Visual Studio Code' digitar el siguiente comando para ver las directivas de ejecución de cada ámbito en orden de
-                prioridad:
 
-                    ⦿   PS C:\..\react_native> Get-ExecutionPolicy
-                    ⦿   Restricted
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-- 01.03.  PowerShell. Directivas: ---------------------------------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-            NOTA:   ⦿   Si aparece 'Restricted', hay que cambiarla a 'Unrestricted' de la siguiente forma
+            01. En la terminal de 'Visual Studio Code', digitar el siguiente comando para ver las directivas de ejecución:
 
-                    ⦿   PS C:\..\react_native> Set-ExecutionPolicy -Scope CurrentUser
+                    PS C:\..\..> Get-ExecutionPolicy
+                    Restricted
 
-                         cmdlet Set-ExecutionPolicy en la posición 1 de la canalización de comandos
-                         Proporcione valores para los parámetros siguientes:
-                         ExecutionPolicy: Unrestricted
+            NOTA:   ⦿   Si aparece 'Restricted', hay que cambiarla a 'Unrestricted' de la siguiente forma:
 
-            04. Verificar la versión de 'node.js' y 'npm' en la terminal de 'Visual Studio Code':
+                    PS C:\..\..> Set-ExecutionPolicy -Scope CurrentUser
 
-                    ⦿   PS C:\..\react_native> node --version
-                    ⦿   PS C:\..\react_native> npm --version
+                    cmdlet Set-ExecutionPolicy en la posición 1 de la canalización de comandos
+                    Proporcione valores para los parámetros siguientes:
+                    ExecutionPolicy: Unrestricted
+
+            02. Verificar la versión de 'node' y 'npm':
+
+                    PS C:\..\..> node --version
+                    PS C:\..\..> npm --version
 
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |-- 01.04.  Instalar Postman: ---------------------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-            01. Descargar 'Postman': https://www.postman.com/downloads/. Este programa nos sirve para realizar probar las peticiones HTTP.
+            01. Descargar 'Postman': https://www.postman.com/downloads/.
 
             02. Instalar 'Postman'.
 
@@ -97,12 +107,11 @@
                     ⦿   Dar clic a 'Don't send' / 'Next' / 'Next' / '☑ Acepto' / 'Finalizar'.
 
             NOTA:   ⦿   Si la instalación no sale como se espera porque hay una versión de Android Studio instalada, revise el siguiente enlace para
-                         desinstalarla totalmente y repita los pasos 01 y 02:
+                         desinstalarlo totalmente y repita los pasos 01 y 02:
 
                             https://blog.buhoos.com/como-desinstalar-completamente-android-studio-de-windows-10/
 
-                    ⦿   En caso que los archivos y/o carpetas no se dejen eliminar, descargue el siguiente programa y siga las instrucciones para
-                         eliminar las carpetas o archivos. Repita los pasos 01 y 02:
+                    ⦿   En caso que los archivos y/o carpetas no se dejen eliminar, descargue el siguiente programa para eliminar carpetas o archivos.
 
                             https://www.iobit.com/es/recommend/imffree.php?name=iobit_unlocker
 
@@ -113,9 +122,9 @@
 
             01. Buscar en el menú Windows 'Editar las variables de entorno del sistema' para enrutar al SDK de Java y Android SDK
 
-            02. Dar clic en 'Variables de entorno…'
+            02. Dar clic en 'Variables de entorno ...'
 
-            03. En las 'Variables del sistema' dar clic en 'Nueva...'
+            03. En las 'Variables de usuario ...' dar clic en 'Nueva ...'
 
                     ⦿   Nombre de la variable:  JAVA_HOME
                     ⦿   Valor de la variable:   'Examinar Directorio': C:\Program Files\Android\Android Studio\jbr\bin
@@ -143,58 +152,62 @@
 
             07. Ejecutar el Emulador dando clic en la punta de flecha (columna 'Actions', la primera vez demorará más tiempo)
 
-            08. Se ha instalado el emulador
-
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |-- 01.08.  Instalar Expo CLI: --------------------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-            Expo CLI es una interfaz de línea de comandos que permite montar un servidor para correr el proyecto localmente, construir proyectos
-            sencillos y publicarlos. Para más información:
+            Expo CLI es una interfaz de línea de comandos que permite montar un servidor para correr el proyecto localmente en el emulador de Android, 
+            Studio, construir proyectos sencillos y publicarlos. Para más información:
 
                     ⦿   https://docs.expo.dev/more/expo-cli/
                     ⦿   https://gist.github.com/mrcodedev/37b463ae63c0c1d762e6efaf4c26af4f
                     ⦿   https://blog.expo.dev/the-new-expo-cli-f4250d8e3421
 
-            01. En la terminal de 'Visual Studio Code', instalar Expo CLI:
+            01. En la terminal de 'Visual Studio Code', instalar Expo CLI con los siguientes comandos:
 
-                    ⦿   PS C:\..\react_native> npm install -g expo-cli exp
-                                            ó
-                    ⦿   PS C:\..\react_native> npm install -g react-native-cli
-
+                    PS C:\..\..> npm install -g expo-cli exp
+                    PS C:\..\..> npm install -g react-native-cli
+                    
             02. Verificar la versión de expo CLI en la terminal de 'Visual Studio Code':
 
-                    ⦿   PS C:\..\react_native> expo  --version
+                    PS C:\..\..> expo  --version
 
-            NOTA:   ⦿   Si ya tiene un proyecto, reemplace en el archivo “package.json”:
+            NOTA:   ⦿   Si ya tiene un proyecto, reemplace en el archivo 'package.json' las siguientes líneas:
 
                             ⦿   "scripts":{ "start": "expo start"}, por "scripts":{ "start": "npx expo start"}
                             ⦿   "scripts":{ "start": "expo start"}, por "scripts":{ "start": "npx expo start"}
 
                     ⦿   En caso de existir problema, puede desinstalar expo CLI en la terminal de 'Visual Studio Code':
 
-                            ⦿   PS C:\..\react_native> npm uninstall -g expo-cli
+                            PS C:\..\..> npm uninstall -g expo-cli
 
                     ⦿   Con el objeto de verificar posibles conflictos de puertos, que se puedan presentar más adelante en el desarrollo de la App,
-                         puede listar los puertos utilizados en Windows desde la consola, con el comando 'netstat -ano'.
+                         puede listar los puertos utilizados desde la terminal de 'Visual Studio Code', con el comando: 'netstat -ano'.
 
+                            PS C:\..\..> netstat -ano
+
+                    ⦿   Para forzar el cierre de algún puerto, digitar el siguiente comando de acuerdo al PID del proceso:
+                            
+                            PS C:\..\..> taskkill /PID 7112 /F
 
 
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
-|||---------------------------------------------------------------- 02. CREAR UNA APP -----------------------------------------------------------------|||
+|||------------------------------------------------ 02.  ESTRUCTURA DE CARPETAS Y ARCHIVOS DEL PROYECTO -----------------------------------------------|||
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 
 
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|-- 01.01.  Crear la carpeta para los proyectos REACT NATIVE: -------------------------------------------------------------------------------------------|
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+              proyecto_nombre/                       #   Carpeta raíz del proyecto          
+              └── backend/                           #   Carpeta del backend
+                  ├── config/                        #   Carpeta que contiene las configuraciones.
+                  │   └── DbConn.php                 #   Configuración de la conexión a la base de datos.
+                  ├── controllers/                   #   Carpeta que contiene los controladores
+                  │   └── Locations.php              #   Controlador de Locations (Entrada el Proyecto)
+                  ├── models/                        #   Carpeta que contiene los modelos
+                  │   └── Location.php               #   Modelo de Datos de 'Location'
 
-            01. Crear una carpeta denominada 'react_native' en el 'Escritorio'. Esta carpeta será la raíz de los proyectos de REACT NATIVE.
-
-                    ⦿   'Escritorio/react_native'.
 
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
