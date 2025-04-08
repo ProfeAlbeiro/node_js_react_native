@@ -202,11 +202,13 @@
               proyecto_nombre/                       #   Carpeta raíz del proyecto          
               └── backend/                           #   Carpeta del backend
                   ├── config/                        #   Carpeta que contiene las configuraciones.
-                  │   └── DbConn.php                 #   Configuración de la conexión a la base de datos.
+                  │   ├── config.js                  #   Configuración de la conexión a la base de datos.
+                  │   ├── keys.js                    #   Configuración de la conexión a la base de datos.
+                  │   └── passport.js                #   Configuración de la conexión a la base de datos.
                   ├── controllers/                   #   Carpeta que contiene los controladores
-                  │   └── Locations.php              #   Controlador de Locations (Entrada el Proyecto)
+                  │   └── userController.js          #   Controlador de Locations (Entrada el Proyecto)
                   ├── models/                        #   Carpeta que contiene los modelos
-                  │   └── Location.php               #   Modelo de Datos de 'Location'
+                  │   └── user.js                    #   Modelo de Datos de 'User'
 
 
 
