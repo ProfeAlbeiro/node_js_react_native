@@ -5,16 +5,10 @@
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 |||                                                                                                                                                    |||
 ||| -- 01.  PREPARAR EL ENTORNO DE DESARROLLO                                                                                                          |||
-||| -- 02.  CREAR UNA APP                                                                                                                              |||
-||| -- 03.  COMPONENTES CENTRALES                                                                                                                      |||
-||| -- 04.  NAVEGACIÓN ENTRE PANTALLAS                                                                                                                 |||
-||| -- 05.  PATRÓN DE DISEÑO MVVM. CONVENCIONES DE GOOGLE                                                                                              |||
-||| -- 06.  MONTANDO UN SERVIDOR NODE JS                                                                                                               |||
-||| -- 07.  CONECTANDO A LA BASE DE DATOS (MYSQL)                                                                                                      |||
-||| -- 08.  AJUSTANDO EL PROYECTO A MVVM                                                                                                               |||
-||| -- 09.  JSON WEB TOKEN                                                                                                                             |||
-||| -- 10.  CUSTOM HOOKS                                                                                                                               |||
-||| -- 11.  DESPLEGAR UN PROYECTO                                                                                                                      |||
+||| -- 02.  ESTRUCTURA DE CARPETAS Y ARCHIVOS                                                                                                          |||
+||| -- 03.  BACKEND. NODE.JS                                                                                                                           |||
+||| -- 04.  FRONTEND. REACT_NATIVE                                                                                                                     |||
+||| -- XX.  DESPLEGAR UN PROYECTO                                                                                                                      |||
 |||                                                                                                                                                    |||
 ||| -- AUTOR:           ADAPTACIÓN hecha por el Instructor ALBEIRO RAMOS. SENA, 2025; del Taller CORREGIDO por el Instructor MAURICIO LARA. SENA, 2024;|||
 |||                     del ORIGINAL elaborado por el Instructor MARCO LEÓN MORA. SENA, 2023.                                                          |||
