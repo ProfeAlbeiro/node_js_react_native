@@ -199,21 +199,109 @@
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 
 
-              proyecto_nombre/                                        #   Carpeta raíz del proyecto          
-              ├── backend/                                            #   Carpeta del backend
-              │   ├── config/                                         #   Carpeta que contiene las configuraciones.
-              │   │   ├── config.js                                   #   Configuración de la conexión a la base de datos.
-              │   │   ├── keys.js                                     #   Configuración de la conexión a la base de datos.
-              │   │   └── passport.js                                 #   Configuración de la conexión a la base de datos.
-              │   ├── controllers/                                    #   Carpeta que contiene los controladores
-              │   │   └── userController.js                           #   Controlador de Locations (Entrada el Proyecto)
-              │   ├── models/                                         #   Carpeta que contiene los modelos
-              │   │   └── user.js                                     #   Modelo de Datos de 'User'
-              │   ├── node_modules/                                   #   Carpeta que contiene los modulos de node.js (No se programa)
-              │   ├── routes/                                         #   Carpeta que contiene los modulos de node.js
-              │   │   └── userRoutes.js                               #   Rutas de 'Usuario'
-              │   ├── package-lock.json                               #   Garantiza la consistencia de las dependencias del backend (No se programa)
-              │   └── package.json                                    #   Metadatos, dependencias, scripts y config del backend (No se programa)
+          proyecto_nombre/                                              #   Carpeta raíz del proyecto          
+          ├── backend/                                                  #   Carpeta del backend
+          │   ├── config/                                               #   Carpeta que contiene las configuraciones.
+          │   │   ├── config.js                                         #   Configuración de la conexión a la base de datos.
+          │   │   ├── keys.js                                           #   Configuración de la conexión a la base de datos.
+          │   │   └── passport.js                                       #   Configuración de la conexión a la base de datos.
+          │   ├── controllers/                                          #   Carpeta que contiene los controladores
+          │   │   └── userController.js                                 #   Controlador de Locations (Entrada el Proyecto)
+          │   ├── models/                                               #   Carpeta que contiene los modelos
+          │   │   └── user.js                                           #   Modelo de Datos de 'User'
+          │   ├── node_modules/                                         #   Carpeta que contiene los modulos de node.js (No se programa)
+          │   ├── routes/                                               #   Carpeta que contiene los modulos de node.js
+          │   │   └── userRoutes.js                                     #   Rutas de 'Usuario'
+          │   ├── package-lock.json                                     #   Garantiza la consistencia de las dependencias del backend (No se programa)
+          │   └── package.json                                          #   Metadatos, dependencias, scripts y config del backend (No se programa)
+          └── frontend/                                                 #   Carpeta del backend
+              ├── .exp/                                                 #   Expo CLI (No se programa).
+              ├── assets/                                               #   Carpeta que contiene recursos estáticos del frontend (Ejp, imágenes)
+              ├── node_modules/                                         #   Carpeta que contiene los modulos de node.js (No se programa)
+              ├── src/                                                  #                 
+              │   ├── Data/                                             #   
+              │   │   ├── repositories/                                 #   
+              │   │   │   ├── AuthRepository.tsx                        #   
+              │   │   │   └── UserLocalRepository.tsx                   #   
+              │   │   └── sources/                                      #   
+              │   │       ├── local/                                    #   
+              │   │       │   └── LocalStorage.tsx                      #   
+              │   │       └── remote/                                   #   
+              │   │           ├── api/                                  #   
+              │   │           │   └── ApiDelivery.tsx                   #   
+              │   │           └── models/                               #   
+              │   │               └── ResponseApiDelivery.tsx           #   
+              │   ├── Domain/                                           #   
+              │   │   ├── entities/                                     #   
+              │   │   │   └── User.tsx                                  #   
+              │   │   ├── repositories/                                 #   
+              │   │   │   ├── AuthRepository.tsx                        #   
+              │   │   │   └── UserLocalRepository.tsx                   #   
+              │   │   └── useCases/                                     #   
+              │   │       ├── auth/                                     #   
+              │   │       │   ├── LoginAuth.tsx                         #   
+              │   │       │   └── RegisterAuth.tsx                      #   
+              │   │       └── userLocal/                                #   
+              │   │           ├── GetUserLocal.tsx                      #   
+              │   │           ├── RemoveUserLocal.tsx                   #   
+              │   │           └── SaveUserLocal.tsx                     #   
+              │   └── Presentation/                                     #   
+              │       ├── components/                                   #   
+              │       │   ├── CustomTextInput.tsx                       #   
+              │       │   └── RoundedButton.tsx                         #   
+              │       ├── hooks/                                        #   
+              │       │   └── useUserLocal.tsx                          #    
+              │       ├── theme/                                        #   
+              │       │   └── AppTheme.tsx                              #   
+              │       └── views/                                        #   
+              │           ├── home/                                     #   
+              │           │   ├── Home.tsx                              #   
+              │           │   ├── Styles.tsx                            #   
+              │           │   └── ViewModel.tsx                         #   
+              │           ├── profile/                                  #   
+              │           │   └── info/                                 #   
+              │           │       ├── ProfileInfo.tsx                   #   
+              │           │       └── ViewModel.tsx                     #   
+              │           └── register/                                 #   
+              │               ├── Register.tsx                          #   
+              │               ├── Styles.tsx                            #   
+              │               └── ViewModel.tsx                         #   
+              ├── .gitignore                                            #   
+              ├── app.json                                              #   
+              ├── App.tsx                                               #   
+              ├── index.ts                                              #   
+              ├── package-lock.json                                     #   
+              ├── package.json                                          #      
+              └── tsconfig.json                                         #   
+
+
+
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-- 02.01.  backend/models/user.js: ---------------------------------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+
+
+
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-- 02.01.  backend/models/user.js: ---------------------------------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
