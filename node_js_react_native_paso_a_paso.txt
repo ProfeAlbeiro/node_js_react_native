@@ -199,16 +199,21 @@
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 
 
-              proyecto_nombre/                       #   Carpeta raíz del proyecto          
-              └── backend/                           #   Carpeta del backend
-                  ├── config/                        #   Carpeta que contiene las configuraciones.
-                  │   ├── config.js                  #   Configuración de la conexión a la base de datos.
-                  │   ├── keys.js                    #   Configuración de la conexión a la base de datos.
-                  │   └── passport.js                #   Configuración de la conexión a la base de datos.
-                  ├── controllers/                   #   Carpeta que contiene los controladores
-                  │   └── userController.js          #   Controlador de Locations (Entrada el Proyecto)
-                  ├── models/                        #   Carpeta que contiene los modelos
-                  │   └── user.js                    #   Modelo de Datos de 'User'
+              proyecto_nombre/                                        #   Carpeta raíz del proyecto          
+              ├── backend/                                            #   Carpeta del backend
+              │   ├── config/                                         #   Carpeta que contiene las configuraciones.
+              │   │   ├── config.js                                   #   Configuración de la conexión a la base de datos.
+              │   │   ├── keys.js                                     #   Configuración de la conexión a la base de datos.
+              │   │   └── passport.js                                 #   Configuración de la conexión a la base de datos.
+              │   ├── controllers/                                    #   Carpeta que contiene los controladores
+              │   │   └── userController.js                           #   Controlador de Locations (Entrada el Proyecto)
+              │   ├── models/                                         #   Carpeta que contiene los modelos
+              │   │   └── user.js                                     #   Modelo de Datos de 'User'
+              │   ├── node_modules/                                   #   Carpeta que contiene los modulos de node.js (No se programa)
+              │   ├── routes/                                         #   Carpeta que contiene los modulos de node.js
+              │   │   └── userRoutes.js                               #   Rutas de 'Usuario'
+              │   ├── package-lock.json                               #   Garantiza la consistencia de las dependencias del backend (No se programa)
+              │   └── package.json                                    #   Metadatos, dependencias, scripts y config del backend (No se programa)
 
 
 
