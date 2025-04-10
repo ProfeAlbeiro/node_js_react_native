@@ -216,8 +216,7 @@
                   │   │   └── userRoutes.js                                   # A. Define las rutas para las operaciones relacionadas con usuarios.
                   │   ├── package-lock.json                                   # A. Versiones exactas de las dependencias del backend.
                   │   └── package.json                                        # A. Manifiesto del backend (nombre, dependencias, scripts, etcs).
-                  └── frontend/                                               # C. Aplicación móvil de React Native.
-                      ├── .exp/                                               # C. Temporales y caché generados por Expo.
+                  └── frontend/                                               # C. Aplicación móvil de React Native.                      
                       ├── assets/                                             # C. Recursos estáticos (imágenes, fuentes).
                       ├── node_modules/                                       # C. Dependencias (librerías) instaladas para el frontend.
                       ├── src/                                                # C. Carpetas y archivos de la aplicación React Native.
