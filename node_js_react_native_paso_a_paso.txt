@@ -199,29 +199,28 @@
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 
 
-          ```
                   proyecto_nombre/
-                  ├── backend/                                                # Contiene la lógica del servidor Node.js para la gestión de datos y API.
-                  │   ├── config/                                             # Almacena archivos de configuración del backend (base de datos, claves).
-                  │   │   ├── config.js                                       # Configuración principal del backend (variables de entorno, etc.).
-                  │   │   ├── keys.js # Contiene claves secretas para seguridad (JWT, servicios externos).
-                  │   │   └── passport.js # Configuración para la autenticación de usuarios (login, registro).
-                  │   ├── controllers/ # Define funciones para manejar las peticiones HTTP y la lógica.
-                  │   │   └── userController.js # Controlador específico para las operaciones relacionadas con los usuarios.
-                  │   ├── models/ # Define la estructura de los datos que se utilizarán en la base de datos.
-                  │   │   └── user.js # Define el esquema del modelo de usuario (campos en la base de datos).
-                  │   ├── node_modules/ # Contiene las dependencias (librerías) instaladas para el backend.
-                  │   ├── routes/ # Define los endpoints (rutas) de la API del backend.
-                  │   │   └── userRoutes.js # Define las rutas específicas para las operaciones relacionadas con usuarios.
-                  │   ├── package-lock.json # Registra las versiones exactas de las dependencias del backend.
-                  │   └── package.json # Archivo de manifiesto del proyecto backend (nombre, dependencias, scripts).
-                  └── frontend/ # Contiene el código de la aplicación móvil desarrollada con React Native.
-                      ├── .exp/ # Archivos temporales y de caché generados por Expo (si se usa).
-                      ├── assets/ # Almacena recursos estáticos (imágenes, fuentes) utilizados por la aplicación.
-                      ├── node_modules/ # Contiene las dependencias (librerías) instaladas para el frontend.
-                      ├── src/ # Contiene el código fuente principal de la aplicación React Native, organizado.
-                      │   ├── Data/ # Capa para la obtención y manipulación de datos (repositorios, fuentes).
-                      │   │   ├── repositories/ # Define interfaces o implementaciones para acceder a diferentes fuentes de datos.
+                  ├── backend/                                                # C. Lógica del servidor Node.js para la gestión de datos y API.
+                  │   ├── config/                                             # C. Configuración del backend (base de datos, claves).
+                  │   │   ├── config.js                                       # A. Configuración principal del backend (variables de entorno, etc.).
+                  │   │   ├── keys.js                                         # A. Claves secretas para seguridad (JWT, servicios externos).
+                  │   │   └── passport.js                                     # A. Configuración para la autenticación de usuarios (login, registro).
+                  │   ├── controllers/                                        # C. Funciones para manejar las peticiones HTTP y la lógica.
+                  │   │   └── userController.js                               # A. Controlador para las operaciones relacionadas con los usuarios.
+                  │   ├── models/                                             # Define la estructura de datos que se utilizarán en la base de datos.
+                  │   │   └── user.js                                         # Define el esquema del modelo de usuario (campos en la base de datos).
+                  │   ├── node_modules/                                       # Contiene las dependencias (librerías) instaladas para el backend.
+                  │   ├── routes/                                             # Define los endpoints (rutas) de la API del backend.
+                  │   │   └── userRoutes.js                                   # Define las rutas para las operaciones relacionadas con usuarios.
+                  │   ├── package-lock.json                                   # Registra las versiones exactas de las dependencias del backend.
+                  │   └── package.json                                        # Archivo de manifiesto del backend (nombre, dependencias, scripts).
+                  └── frontend/                                               # Contiene el código de la aplicación móvil de React Native.
+                      ├── .exp/                                               # Archivos temporales y de caché generados por Expo.
+                      ├── assets/                                             # Almacena recursos estáticos (imágenes, fuentes).
+                      ├── node_modules/                                       # Contiene las dependencias (librerías) instaladas para el frontend.
+                      ├── src/                                                # Contiene el código de la aplicación React Native.
+                      │   ├── Data/                                           # Capa para obtención y manipulación de datos (repositorios, fuentes).
+                      │   │   ├── repositories/                               # Interfaces para acceder a diferentes fuentes de datos.
                       │   │   │   ├── AuthRepository.tsx # Lógica para la autenticación interactuando con una fuente de datos.
                       │   │   │   └── UserLocalRepository.tsx # Gestión de datos del usuario a nivel local (AsyncStorage).
                       │   │   └── sources/ # Contiene las implementaciones concretas de las fuentes de datos (local, remota).
@@ -274,8 +273,7 @@
                       ├── package-lock.json # Registra las versiones exactas de las dependencias del frontend.
                       ├── package.json # Archivo de manifiesto del proyecto frontend (nombre, dependencias, scripts).
                       └── tsconfig.json # Archivo de configuración para el compilador de TypeScript (opciones de compilación).
-                  ```                                            
-
+                  
 
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
