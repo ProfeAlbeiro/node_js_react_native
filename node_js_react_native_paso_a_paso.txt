@@ -1,6 +1,6 @@
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
-|||------------------------------------------------------------- NODE.JS Y REACT NATIVE Y NODE.JS -----------------------------------------------------|||
+|||-------------------------------------------------------------- NODE.JS Y REACT NATIVE --------------------------------------------------------------|||
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 |||                                                                                                                                                    |||
@@ -199,80 +199,82 @@
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 
 
-          proyecto_nombre/                                              #   Carpeta raíz del proyecto          
-          ├── backend/                                                  #   Carpeta del backend
-          │   ├── config/                                               #   Carpeta que contiene las configuraciones.
-          │   │   ├── config.js                                         #   Configuración de la conexión a la base de datos.
-          │   │   ├── keys.js                                           #   Configuración de la conexión a la base de datos.
-          │   │   └── passport.js                                       #   Configuración de la conexión a la base de datos.
-          │   ├── controllers/                                          #   Carpeta que contiene los controladores
-          │   │   └── userController.js                                 #   Controlador de Locations (Entrada el Proyecto)
-          │   ├── models/                                               #   Carpeta que contiene los modelos
-          │   │   └── user.js                                           #   Modelo de Datos de 'User'
-          │   ├── node_modules/                                         #   Carpeta que contiene los modulos de node.js (No se programa)
-          │   ├── routes/                                               #   Carpeta que contiene los modulos de node.js
-          │   │   └── userRoutes.js                                     #   Rutas de 'Usuario'
-          │   ├── package-lock.json                                     #   Garantiza la consistencia de las dependencias del backend (No se programa)
-          │   └── package.json                                          #   Metadatos, dependencias, scripts y config del backend (No se programa)
-          └── frontend/                                                 #   Carpeta del backend
-              ├── .exp/                                                 #   Expo CLI (No se programa).
-              ├── assets/                                               #   Carpeta que contiene recursos estáticos del frontend (Ejp, imágenes)
-              ├── node_modules/                                         #   Carpeta que contiene los modulos de node.js (No se programa)
-              ├── src/                                                  #                 
-              │   ├── Data/                                             #   
-              │   │   ├── repositories/                                 #   
-              │   │   │   ├── AuthRepository.tsx                        #   
-              │   │   │   └── UserLocalRepository.tsx                   #   
-              │   │   └── sources/                                      #   
-              │   │       ├── local/                                    #   
-              │   │       │   └── LocalStorage.tsx                      #   
-              │   │       └── remote/                                   #   
-              │   │           ├── api/                                  #   
-              │   │           │   └── ApiDelivery.tsx                   #   
-              │   │           └── models/                               #   
-              │   │               └── ResponseApiDelivery.tsx           #   
-              │   ├── Domain/                                           #   
-              │   │   ├── entities/                                     #   
-              │   │   │   └── User.tsx                                  #   
-              │   │   ├── repositories/                                 #   
-              │   │   │   ├── AuthRepository.tsx                        #   
-              │   │   │   └── UserLocalRepository.tsx                   #   
-              │   │   └── useCases/                                     #   
-              │   │       ├── auth/                                     #   
-              │   │       │   ├── LoginAuth.tsx                         #   
-              │   │       │   └── RegisterAuth.tsx                      #   
-              │   │       └── userLocal/                                #   
-              │   │           ├── GetUserLocal.tsx                      #   
-              │   │           ├── RemoveUserLocal.tsx                   #   
-              │   │           └── SaveUserLocal.tsx                     #   
-              │   └── Presentation/                                     #   
-              │       ├── components/                                   #   
-              │       │   ├── CustomTextInput.tsx                       #   
-              │       │   └── RoundedButton.tsx                         #   
-              │       ├── hooks/                                        #   
-              │       │   └── useUserLocal.tsx                          #    
-              │       ├── theme/                                        #   
-              │       │   └── AppTheme.tsx                              #   
-              │       └── views/                                        #   
-              │           ├── home/                                     #   
-              │           │   ├── Home.tsx                              #   
-              │           │   ├── Styles.tsx                            #   
-              │           │   └── ViewModel.tsx                         #   
-              │           ├── profile/                                  #   
-              │           │   └── info/                                 #   
-              │           │       ├── ProfileInfo.tsx                   #   
-              │           │       └── ViewModel.tsx                     #   
-              │           └── register/                                 #   
-              │               ├── Register.tsx                          #   
-              │               ├── Styles.tsx                            #   
-              │               └── ViewModel.tsx                         #   
-              ├── .gitignore                                            #   
-              ├── app.json                                              #   
-              ├── App.tsx                                               #   
-              ├── index.ts                                              #   
-              ├── package-lock.json                                     #   
-              ├── package.json                                          #      
-              └── tsconfig.json                                         #   
+          ```
+                  proyecto_nombre/
+                  ├── backend/                                                # Contiene la lógica del servidor Node.js para la gestión de datos y API.
+                  │   ├── config/                                             # Almacena archivos de configuración del backend (base de datos, claves).
+                  │   │   ├── config.js                                       # Configuración principal del backend (variables de entorno, etc.).
+                  │   │   ├── keys.js # Contiene claves secretas para seguridad (JWT, servicios externos).
+                  │   │   └── passport.js # Configuración para la autenticación de usuarios (login, registro).
+                  │   ├── controllers/ # Define funciones para manejar las peticiones HTTP y la lógica.
+                  │   │   └── userController.js # Controlador específico para las operaciones relacionadas con los usuarios.
+                  │   ├── models/ # Define la estructura de los datos que se utilizarán en la base de datos.
+                  │   │   └── user.js # Define el esquema del modelo de usuario (campos en la base de datos).
+                  │   ├── node_modules/ # Contiene las dependencias (librerías) instaladas para el backend.
+                  │   ├── routes/ # Define los endpoints (rutas) de la API del backend.
+                  │   │   └── userRoutes.js # Define las rutas específicas para las operaciones relacionadas con usuarios.
+                  │   ├── package-lock.json # Registra las versiones exactas de las dependencias del backend.
+                  │   └── package.json # Archivo de manifiesto del proyecto backend (nombre, dependencias, scripts).
+                  └── frontend/ # Contiene el código de la aplicación móvil desarrollada con React Native.
+                      ├── .exp/ # Archivos temporales y de caché generados por Expo (si se usa).
+                      ├── assets/ # Almacena recursos estáticos (imágenes, fuentes) utilizados por la aplicación.
+                      ├── node_modules/ # Contiene las dependencias (librerías) instaladas para el frontend.
+                      ├── src/ # Contiene el código fuente principal de la aplicación React Native, organizado.
+                      │   ├── Data/ # Capa para la obtención y manipulación de datos (repositorios, fuentes).
+                      │   │   ├── repositories/ # Define interfaces o implementaciones para acceder a diferentes fuentes de datos.
+                      │   │   │   ├── AuthRepository.tsx # Lógica para la autenticación interactuando con una fuente de datos.
+                      │   │   │   └── UserLocalRepository.tsx # Gestión de datos del usuario a nivel local (AsyncStorage).
+                      │   │   └── sources/ # Contiene las implementaciones concretas de las fuentes de datos (local, remota).
+                      │   │       ├── local/ # Lógica para acceder a datos almacenados localmente en el dispositivo.
+                      │   │       │   └── LocalStorage.tsx # Implementación para interactuar con el almacenamiento local (AsyncStorage).
+                      │   │       └── remote/ # Lógica para interactuar con la API del backend (clientes API).
+                      │   │           ├── api/ # Define los clientes o servicios para realizar llamadas a la API.
+                      │   │           │   └── ApiDelivery.tsx # Cliente específico para interactuar con la API relacionada con "delivery".
+                      │   │           └── models/ # Define las estructuras de datos que se reciben de la API.
+                      │   │               └── ResponseApiDelivery.tsx # Define el tipo de la respuesta de la API de "delivery".
+                      │   ├── Domain/ # Contiene la lógica de negocio pura y las entidades del dominio (independiente).
+                      │   │   ├── entities/ # Define las estructuras de los objetos del negocio (User).
+                      │   │   │   └── User.tsx # Define la entidad de usuario con sus propiedades (nombre, email).
+                      │   │   ├── repositories/ # Define interfaces (contratos) para acceder a los datos (implementado en Data).
+                      │   │   │   ├── AuthRepository.tsx # Define la interfaz para las operaciones de autenticación.
+                      │   │   │   └── UserLocalRepository.tsx # Define la interfaz para la gestión de datos locales del usuario.
+                      │   │   └── useCases/ # Contiene la lógica de negocio específica de la aplicación (orquesta dominio/data).
+                      │   │       ├── auth/ # Casos de uso relacionados con la autenticación (Login, Register).
+                      │   │       │   ├── LoginAuth.tsx # Lógica para el proceso de inicio de sesión del usuario.
+                      │   │       │   └── RegisterAuth.tsx # Lógica para el proceso de registro de nuevos usuarios.
+                      │   │       └── userLocal/ # Casos de uso relacionados con la gestión local de la información del usuario.
+                      │   │           ├── GetUserLocal.tsx # Lógica para obtener la información del usuario almacenada localmente.
+                      │   │           ├── RemoveUserLocal.tsx # Lógica para eliminar la información del usuario almacenada localmente.
+                      │   │           └── SaveUserLocal.tsx # Lógica para guardar la información del usuario localmente.
+                      │   └── Presentation/ # Capa de la interfaz de usuario y presentación de datos (components, views).
+                      │       ├── components/ # Contiene componentes de interfaz de usuario reutilizables (inputs, buttons).
+                      │       │   ├── CustomTextInput.tsx # Componente de entrada de texto personalizado con estilos.
+                      │       │   └── RoundedButton.tsx # Componente de botón con estilos de bordes redondeados.
+                      │       ├── hooks/ # Contiene hooks personalizados de React para lógica de presentación reutilizable.
+                      │       │   └── useUserLocal.tsx # Hook personalizado para acceder y manipular la información local del usuario.
+                      │       ├── theme/ # Define los estilos y la temática visual general de la aplicación.
+                      │       │   └── AppTheme.tsx # Define la paleta de colores, tipografía y estilos consistentes.
+                      │       └── views/ # Contiene las pantallas o vistas principales de la aplicación.
+                      │           ├── home/ # Contiene los archivos relacionados con la pantalla principal de la aplicación.
+                      │           │   ├── Home.tsx # Componente principal de la pantalla de inicio (Home).
+                      │           │   ├── Styles.tsx # Estilos específicos para los componentes de la pantalla de inicio.
+                      │           │   └── ViewModel.tsx # Lógica de presentación para la pantalla de inicio (estado, interacción).
+                      │           ├── profile/ # Contiene los archivos relacionados con la pantalla de perfil del usuario.
+                      │           │   └── info/ # Contiene los archivos relacionados con la información del perfil del usuario.
+                      │           │       ├── ProfileInfo.tsx # Componente para mostrar la información del perfil del usuario.
+                      │           │       └── ViewModel.tsx # Lógica de presentación para la información del perfil del usuario.
+                      │           └── register/ # Contiene los archivos relacionados con la pantalla de registro de usuarios.
+                      │               ├── Register.tsx # Componente principal de la pantalla de registro de usuarios.
+                      │               ├── Styles.tsx # Estilos específicos para los componentes de la pantalla de registro.
+                      │               └── ViewModel.tsx # Lógica de presentación para la pantalla de registro de usuarios.
+                      ├── .gitignore # Especifica archivos y carpetas que Git debe ignorar (node_modules, etc.).
+                      ├── app.json # Archivo de configuración utilizado por Expo para la configuración general de la app.
+                      ├── App.tsx # Componente raíz de la aplicación React Native (punto de entrada UI).
+                      ├── index.ts # Punto de entrada para la aplicación React Native (fuera de Expo).
+                      ├── package-lock.json # Registra las versiones exactas de las dependencias del frontend.
+                      ├── package.json # Archivo de manifiesto del proyecto frontend (nombre, dependencias, scripts).
+                      └── tsconfig.json # Archivo de configuración para el compilador de TypeScript (opciones de compilación).
+                  ```                                            
 
 
 
