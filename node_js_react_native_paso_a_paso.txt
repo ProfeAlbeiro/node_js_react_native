@@ -268,7 +268,55 @@
 |-- 03.01.  Crear la carpeta backend/: ------------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-            01. Modificar el código del archivo 'App.tsx', para agregar una imagen de fondo:
+            01. Dentro de la carpeta 'proyecto_nombre' crear la carpeta 'backend'.
+            
+            02. Abrir otra Terminal en 'Visual Studio Code' y digitar los siguientes comandos:
+
+                PS C:\..\> cd node_js
+                PS C:\..\node_js> npm init
+                This utility will walk you through creating a package.json file.
+                It only covers the most common items, and tries to guess sensible defaults.
+
+                See `npm help init` for definitive documentation on these fields
+                and exactly what they do.
+
+                Use `npm install <pkg>` afterwards to install a package and
+                save it as a dependency in the package.json file.
+
+                Press ^C at any time to quit.
+                package name: (node_js) nodejs
+                version: (1.0.0)
+                description: Backend de la app de prueba 'my-app' de React Native
+                entry point: (index.js) server.js
+                test command:
+                git repository:
+                keywords: ReactNative NodeJs
+                author: Instructor Albeiro Ramos
+                license: (ISC) MIT
+                About to write to C:\Users\Instructor\Documents\_albe_\react_native\node_js\package.json:
+
+                {
+                  "name": "nodejs",
+                  "version": "1.0.0",
+                  "description": "Backend de la app de prueba 'my-app' de React Native",
+                  "main": "server.js",
+                  "scripts": {
+                    "test": "echo \"Error: no test specified\" && exit 1"
+                  },
+                  "keywords": [
+                    "ReactNative",
+                    "NodeJs"
+                  ],
+                  "author": "Instructor Albeiro Ramos",
+                  "license": "MIT"
+                }
+
+
+                Is this OK? (yes) yes
+
+
+                PS C:\..\node_js> npm i express
+                PS C:\..\node_js> npm i http
 
 
 
