@@ -153,45 +153,6 @@
             07. Ejecutar el Emulador dando clic en la punta de flecha (columna 'Actions', la primera vez demorará más tiempo)
 
 
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|-- 01.08.  Instalar Expo CLI: --------------------------------------------------------------------------------------------------------------------------|
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-            Expo CLI es una interfaz de línea de comandos que permite montar un servidor para correr el proyecto localmente en el emulador de Android, 
-            Studio, construir proyectos sencillos y publicarlos. Para más información:
-
-                    ⦿   https://docs.expo.dev/more/expo-cli/
-                    ⦿   https://gist.github.com/mrcodedev/37b463ae63c0c1d762e6efaf4c26af4f
-                    ⦿   https://blog.expo.dev/the-new-expo-cli-f4250d8e3421
-
-            01. En la terminal de 'Visual Studio Code', instalar Expo CLI con los siguientes comandos:
-
-                    PS C:\..\..> npm install -g expo-cli exp
-                    PS C:\..\..> npm install -g react-native-cli
-                    
-            02. Verificar la versión de expo CLI en la terminal de 'Visual Studio Code':
-
-                    PS C:\..\..> expo  --version
-
-            NOTA:   ⦿   Si ya tiene un proyecto, reemplace en el archivo 'package.json' las siguientes líneas:
-
-                            ⦿   "scripts":{ "start": "expo start"}, por "scripts":{ "start": "npx expo start"}
-                            ⦿   "scripts":{ "start": "expo start"}, por "scripts":{ "start": "npx expo start"}
-
-                    ⦿   En caso de existir problema, puede desinstalar expo CLI en la terminal de 'Visual Studio Code':
-
-                            PS C:\..\..> npm uninstall -g expo-cli
-
-                    ⦿   Con el objeto de verificar posibles conflictos de puertos, que se puedan presentar más adelante en el desarrollo de la App,
-                         puede listar los puertos utilizados desde la terminal de 'Visual Studio Code', con el comando: 'netstat -ano'.
-
-                            PS C:\..\..> netstat -ano
-
-                    ⦿   Para forzar el cierre de algún puerto, digitar el siguiente comando de acuerdo al PID del proceso:
-                            
-                            PS C:\..\..> taskkill /PID 7112 /F
-
-
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
 |||------------------------------------------------ 02.  ESTRUCTURA DE CARPETAS Y ARCHIVOS DEL PROYECTO -----------------------------------------------|||
@@ -201,7 +162,7 @@
                                                                                                                                         # C = Carpetas
                                                                                                                                         # A = Archivos
 
-                  proyecto_nombre/                                            # C. Backend como el Fronend de un proyecto móvil.
+                  proyecto_nombre/                                            # C. Backend y Frontend de un proyecto móvil.
                   ├── backend/                                                # C. Lógica del servidor Node.js para la gestión de datos y API.
                   │   ├── config/                                             # C. Configuración del backend (base de datos, claves).
                   │   │   ├── config.js                                       # A. Configuración principal del backend (variables de entorno, etc.).
@@ -283,15 +244,33 @@
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 
+                                                                                                                                        # C = Carpetas
+                                                                                                                                        # A = Archivos
+
+                  proyecto_nombre/                                            # C. Backend y Frontend de un proyecto móvil.
+                  ├── backend/                                                # C. Lógica del servidor Node.js para la gestión de datos y API.
+                  │   ├── config/                                             # C. Configuración del backend (base de datos, claves).
+                  │   │   ├── config.js                                       # A. Configuración principal del backend (variables de entorno, etc.).
+                  │   │   ├── keys.js                                         # A. Claves secretas para seguridad (JWT, servicios externos).
+                  │   │   └── passport.js                                     # A. Configuración para la autenticación de usuarios (login, registro).
+                  │   ├── controllers/                                        # C. Funciones para manejar las peticiones HTTP y la lógica.
+                  │   │   └── userController.js                               # A. Controlador para las operaciones relacionadas con los usuarios.
+                  │   ├── models/                                             # C. Estructura de datos que se utilizarán en la base de datos.
+                  │   │   └── user.js                                         # A. Esquema del modelo de usuario (campos en la base de datos).
+                  │   ├── node_modules/                                       # C. Dependencias (librerías) instaladas para el backend.
+                  │   ├── routes/                                             # C. Endpoints (rutas) de la API del backend.
+                  │   │   └── userRoutes.js                                   # A. Define las rutas para las operaciones relacionadas con usuarios.
+                  │   ├── package-lock.json                                   # A. Versiones exactas de las dependencias del backend.
+                  │   └── package.json                                        # A. Manifiesto del backend (nombre, dependencias, scripts, etcs).
+
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|-- 03.01.  Ventana de inicio: --------------------------------------------------------------------------------------------------------------------------|
+|-- 03.01.  Crear la carpeta backend/: ------------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-            01. Consultar los componentes para construir el código: https://reactnative.dev/docs/components-and-apis.
+            01. Modificar el código del archivo 'App.tsx', para agregar una imagen de fondo:
 
-            02. Descargar las siguientes imágenes: https://github.com/ProfeAlbeiro/react_native/tree/main/sources/img/assets en la carpeta 'assets' de
-                'my-app'.
+
 
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -771,6 +750,55 @@
 |||---------------------------------------------------------- 04. NAVEGACIÓN ENTRE PANTALLAS ----------------------------------------------------------|||
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
+
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-- 01.03.  Instalar Expo CLI: --------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+            Expo CLI es una interfaz de línea de comandos que permite montar un servidor para correr el proyecto localmente en el emulador de Android, 
+            Studio, construir proyectos sencillos y publicarlos. Para más información:
+
+                    ⦿   https://docs.expo.dev/more/expo-cli/
+                    ⦿   https://gist.github.com/mrcodedev/37b463ae63c0c1d762e6efaf4c26af4f
+                    ⦿   https://blog.expo.dev/the-new-expo-cli-f4250d8e3421
+
+            01. En la terminal de 'Visual Studio Code', instalar Expo CLI con los siguientes comandos:
+
+                    PS C:\..\..> npm install -g expo-cli exp
+                    PS C:\..\..> npm install -g react-native-cli
+                    
+            02. Verificar la versión de expo CLI en la terminal de 'Visual Studio Code':
+
+                    PS C:\..\..> expo  --version
+
+            NOTA:   ⦿   Si ya tiene un proyecto, reemplace en el archivo 'package.json' las siguientes líneas:
+
+                            ⦿   "scripts":{ "start": "expo start"}, por "scripts":{ "start": "npx expo start"}
+                            ⦿   "scripts":{ "start": "expo start"}, por "scripts":{ "start": "npx expo start"}
+
+                    ⦿   En caso de existir problema, puede desinstalar expo CLI en la terminal de 'Visual Studio Code':
+
+                            PS C:\..\..> npm uninstall -g expo-cli
+
+                    ⦿   Con el objeto de verificar posibles conflictos de puertos, que se puedan presentar más adelante en el desarrollo de la App,
+                         puede listar los puertos utilizados desde la terminal de 'Visual Studio Code', con el comando: 'netstat -ano'.
+
+                            PS C:\..\..> netstat -ano
+
+                    ⦿   Para forzar el cierre de algún puerto, digitar el siguiente comando de acuerdo al PID del proceso:
+                            
+                            PS C:\..\..> taskkill /PID 7112 /F
+
+
+
+
+
+
+
+
+
+
+
 
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
