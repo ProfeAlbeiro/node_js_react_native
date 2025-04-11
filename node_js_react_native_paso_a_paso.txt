@@ -318,7 +318,7 @@
                 PS C:\..\backend> npm i express
                 PS C:\..\backend> npm i http
 
-                03. En la carpeta 'node_js' crear un archivo denominado 'server.js' y escribir el siguiente código:
+                03. En la carpeta 'backend' crear un archivo denominado 'server.js' y escribir el siguiente código:
 
                     01   const express = require('express');
                     02   const app = express();
