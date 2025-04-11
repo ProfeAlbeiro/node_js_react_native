@@ -250,24 +250,9 @@
 |-- 07.01.  Creando la base de datos 'MySql': -----------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-            01. Crear en la carpeta 'node_js' una con el nombre 'db' y en su interior un archivo denominado 'nodejs_base1.sql'. El código del archivo
-                es el siguiente:
+            01. Copie el código de la base de datos del siguiente enlace:
 
-                    01   CREATE SCHEMA nodejs_base1 DEFAULT CHARACTER SET utf8 ;
-                    02   USE nodejs_base1;
-                    03
-                    04   CREATE TABLE users (
-                    05     id BIGINT NOT NULL AUTO_INCREMENT,
-                    06     email VARCHAR(180) NOT NULL UNIQUE,
-                    07     name VARCHAR(90) NOT NULL,
-                    08     lastname VARCHAR(90) NOT NULL,
-                    09     phone VARCHAR(90) NOT NULL UNIQUE,
-                    10     image VARCHAR(255) NULL,
-                    11     password VARCHAR(90) NOT NULL,
-                    12     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    13     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                    14     PRIMARY KEY (id)
-                    15   ) ENGINE=InnoDB;
+
 
             02. En 'Workbench' o en 'phpMyAdmin' ejecutar el código anterior para crear la base de datos.
 
