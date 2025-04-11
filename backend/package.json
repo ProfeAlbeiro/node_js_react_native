@@ -12,7 +12,9 @@
   "author": "Instructor Albeiro Ramos",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
-    "http": "^0.0.1-security"
+    "http": "^0.0.1-security",
+    "morgan": "^1.10.0"
   }
 }
