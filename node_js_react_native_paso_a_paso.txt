@@ -318,7 +318,7 @@
                 PS C:\..\backend> npm i express
                 PS C:\..\backend> npm i http
 
-                03. En la carpeta 'backend' crear un archivo denominado 'server.js' y escribir el siguiente código:
+            03. En la carpeta 'backend' crear un archivo denominado 'server.js' y escribir el siguiente código:
 
                     01   const express = require('express');
                     02   const app = express();
@@ -332,6 +332,25 @@
                     10   server.listen(3000, '192.168.137.1' || 'localhost', function(){
                     11       console.log('Aplicación de node.js ' + process.pid + ' inicio en el puerto ' + port);
                     12   });
+
+            NOTA:   ⦿   En la 'línea 10', se está solicitando la dirección IP del computador.
+
+                    ⦿   Para saber la dirección IP del computador en la terminal digite el siguiente comando:
+
+                         PS C:\..\backend> ipconfig
+
+                    ⦿   En el resultado, busque la dirección 'IPv4':
+
+                         Dirección IPv4. . . . . . . . . . . . . . : 172.17.16.1
+                         Dirección IPv4. . . . . . . . . . . . . . : 10.1.193.211
+
+                    ⦿   Cualquiera de las dos direcciones es válida. Reemplace la dirección IPv4 en la 'línea 10' del archivo 'server.js'.
+
+                    ⦿   Escriba 'clear' en la Terminal de Visual Studio Code, para limpiarla .
+
+                         PS C:\..\backend> clear
+
+
 
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
