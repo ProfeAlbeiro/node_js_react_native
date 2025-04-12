@@ -312,7 +312,7 @@
 
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|-- 04.02.  Configurar el Servidor: ---------------------------------------------------------------------------------------------------------------------|
+|-- 04.02.  Configurar el 'backend/': -------------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
             01. Abrir una Terminal en 'Visual Studio Code' y digitar los siguientes comandos:
@@ -369,7 +369,48 @@
                     PS C:\..\backend> npm i passport-jwt
                     PS C:\..\backend> npm i jsonwebtoken
 
-            02. En la carpeta 'backend' crear un archivo denominado 'server.js' y escribir el siguiente código:
+
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-- 04.02.  'backend/config/config.js': -----------------------------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+            01. En 'backend/config/config.js' escribir el siguiente código:
+
+                    01   const mysql = require('mysql');
+                    02   const db = mysql.createConnection({
+                    03     host: 'localhost',
+                    04     user: 'root',
+                    05     password: '',
+                    06     database: 'nodejs_base1'
+                    07     port: 3307
+                    08   });
+                    09
+                    10   db.connect(function(err) {
+                    11     if (err) throw err;
+                    12     console.log('Base de datos conectada')
+                    13   });
+                    14
+                    15   module.exports = db;
+
+            02. Explicación del código:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            03. En 'backend/server.js' escribir el siguiente código:
 
                     01   const express = require('express');
                     02   const passport = require('passport');
@@ -416,7 +457,7 @@
                     43     res.status(err.status || 500).send(err.stack);
                     44   });
 
-            NOTA:   ⦿   En la 'línea 21', se está solicitando la dirección IP del computador.
+            NOTA:   ⦿   En la 'línea 29', se está solicitando la dirección IP del computador.
 
                     ⦿   Para saber la dirección IP del computador en la terminal digite el siguiente comando:
 
@@ -427,15 +468,20 @@
                          Dirección IPv4. . . . . . . . . . . . . . : 172.17.16.1
                          Dirección IPv4. . . . . . . . . . . . . . : 10.1.193.211
 
-                    ⦿   Cualquiera de las dos direcciones es válida. Reemplace la dirección IPv4 en la 'línea 21' del archivo 'server.js'.
+                    ⦿   Cualquiera de las dos direcciones es válida. Reemplace la dirección IPv4 en la 'línea 29' del archivo 'server.js'.
 
                     ⦿   Escriba 'clear' en la Terminal de Visual Studio Code, para limpiarla .
 
                          PS C:\..\backend> clear
 
+            03. En la Terminal de 'Visual Studio Code' digitar el siguiente comando para ejecutar el servidor:
+
+                         PS C:\..\backend> node server.js
+
+
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|-- 04.03.  Crear la API: ------------------------------------------------------------------------------------------------------------|
+|-- 04.03.  Crear la API: -------------------------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 
