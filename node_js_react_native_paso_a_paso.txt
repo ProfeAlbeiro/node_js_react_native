@@ -303,11 +303,11 @@
                 │   │   └── userController.js                               # A. Controlador para las operaciones relacionadas con los usuarios.
                 │   ├── models/                                             # C. Estructura de datos que se utilizarán en la base de datos.
                 │   │   └── user.js                                         # A. Esquema del modelo de usuario (campos en la base de datos).
-                │   ├── node_modules/                                       # C. Dependencias (librerías) instaladas para el backend      (NO CREAR).
+                │   ├── node_modules/              (NO CREAR)               # C. Dependencias (librerías) instaladas para el backend.
                 │   ├── routes/                                             # C. Endpoints (rutas) de la API del backend.
                 │   │   └── userRoutes.js                                   # A. Define las rutas para las operaciones relacionadas con usuarios.
-                │   ├── package-lock.json                                   # A. Versiones exactas de las dependencias del backend        (NO CREAR).
-                │   ├── package.json                                        # A. Manifiesto del backend (dependencias, scripts, etcs)     (NO CREAR).
+                │   ├── package-lock.json          (NO CREAR)               # A. Versiones exactas de las dependencias del backend.
+                │   ├── package.json               (NO CREAR)               # A. Manifiesto del backend (dependencias, scripts, etcs).
                 │   └── server.js                                           # A. Servidor node.js.
 
 
