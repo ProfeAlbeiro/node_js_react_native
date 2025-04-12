@@ -199,7 +199,8 @@
                 │   ├── routes/                                             # C. Endpoints (rutas) de la API del backend.
                 │   │   └── userRoutes.js                                   # A. Define las rutas para las operaciones relacionadas con usuarios.
                 │   ├── package-lock.json                                   # A. Versiones exactas de las dependencias del backend.
-                │   └── package.json                                        # A. Manifiesto del backend (nombre, dependencias, scripts, etcs).
+                │   ├── package.json                                        # A. Manifiesto del backend (nombre, dependencias, scripts, etcs).
+                │   └── server.js                                           # A. Servidor node.js.
                 └── frontend/                                               # C. Aplicación móvil de React Native.
                     ├── assets/                                             # C. Recursos estáticos (imágenes, fuentes).
                     ├── node_modules/                                       # C. Dependencias (librerías) instaladas para el frontend.
@@ -285,6 +286,10 @@
 |||----------------------------------------------------------------------------------------------------------------------------------------------------|||
 |||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||
 
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-- 04.01.  Crear la estructura de carpetas y los archivos del 'backend/': ------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+
                                                                                                                                         # C = Carpetas
                                                                                                                                         # A = Archivos
 
@@ -298,18 +303,13 @@
                 │   │   └── userController.js                               # A. Controlador para las operaciones relacionadas con los usuarios.
                 │   ├── models/                                             # C. Estructura de datos que se utilizarán en la base de datos.
                 │   │   └── user.js                                         # A. Esquema del modelo de usuario (campos en la base de datos).
-                │   ├── node_modules/                                       # C. Dependencias (librerías) instaladas para el backend.
+                │   ├── node_modules/                                       # C. Dependencias (librerías) instaladas para el backend      (NO CREAR).
                 │   ├── routes/                                             # C. Endpoints (rutas) de la API del backend.
                 │   │   └── userRoutes.js                                   # A. Define las rutas para las operaciones relacionadas con usuarios.
-                │   ├── package-lock.json                                   # A. Versiones exactas de las dependencias del backend.
-                │   └── package.json                                        # A. Manifiesto del backend (nombre, dependencias, scripts, etcs).
+                │   ├── package-lock.json                                   # A. Versiones exactas de las dependencias del backend        (NO CREAR).
+                │   ├── package.json                                        # A. Manifiesto del backend (dependencias, scripts, etcs)     (NO CREAR).
+                │   └── server.js                                           # A. Servidor node.js.
 
-
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|-- 04.01.  Crear la carpeta 'backend': -----------------------------------------------------------------------------------------------------------------|
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-            01. Dentro de la carpeta 'proyecto_nombre' crear la carpeta 'backend'.
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |-- 04.02.  Configurar el Servidor: ---------------------------------------------------------------------------------------------------------------------|
