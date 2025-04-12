@@ -315,7 +315,6 @@
 |-- 04.02.  Configurar el Servidor: ---------------------------------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-
             01. Abrir una Terminal en 'Visual Studio Code' y digitar los siguientes comandos:
 
                     PS C:\..\> cd backend
@@ -333,7 +332,7 @@
                     Press ^C at any time to quit.
                     package name: (backend) nodejs
                     version: (1.0.0)
-                    description: Backend de la app de prueba 'my-app' de React Native
+                    description: Backend de la app móvil de react native
                     entry point: (index.js) server.js
                     test command:
                     git repository:
@@ -365,6 +364,7 @@
                     PS C:\..\backend> npm i cors
                     PS C:\..\backend> npm i morgan
                     PS C:\..\backend> npm i mysql
+                    PS C:\..\backend> npm i bcryptjs
                     PS C:\..\backend> npm i passport
                     PS C:\..\backend> npm i passport-jwt
                     PS C:\..\backend> npm i jsonwebtoken
