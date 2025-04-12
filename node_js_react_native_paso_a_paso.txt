@@ -316,7 +316,7 @@
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 
-            02. Abrir otra Terminal en 'Visual Studio Code' y digitar los siguientes comandos:
+            01. Abrir una Terminal en 'Visual Studio Code' y digitar los siguientes comandos:
 
                     PS C:\..\> cd backend
                     PS C:\..\backend> npm init
@@ -369,7 +369,7 @@
                     PS C:\..\backend> npm i passport-jwt
                     PS C:\..\backend> npm i jsonwebtoken
 
-            03. En la carpeta 'backend' crear un archivo denominado 'server.js' y escribir el siguiente código:
+            02. En la carpeta 'backend' crear un archivo denominado 'server.js' y escribir el siguiente código:
 
                     01   const express = require('express');
                     02   const passport = require('passport');
@@ -433,10 +433,6 @@
 
                          PS C:\..\backend> clear
 
-            04. Abrir 'Postman', escribir la dirección ip y el puerto, por ejemplo:
-
-                    ⦿   172.17.16.1:3000
-                    ⦿   La Respuesta de 'Postman' será: 'Ruta raíz del Backend'
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |-- 04.03.  Crear la API: ------------------------------------------------------------------------------------------------------------|
