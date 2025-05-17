@@ -48,7 +48,7 @@
             05. Abrir una 'Terminal' en Visual Studio Code:
 
                     ⦿   'Terminal / New Terminal' ó 'Ctrl + Shift + ñ'
-                    ⦿   Verificar que sea 'pwsh' o sino hay que cambiarla
+                    ⦿   Verificar que sea 'pwsh' o 'powershell', de lo contrario, hay que cambiarla
 
 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|
